@@ -1,32 +1,42 @@
 body {
-    background-color: #121926;
     margin: 0;
-    max-width: 100%;
-    overflow-x: hidden;
+    height: 1000vh;
+    -ms-overflow-style: none;
+    /* for Internet Explorer, Edge */
+    scrollbar-width: none;
+    /* for Firefox */
+    overflow-y: scroll;
 }
 
-#NAITBanner {
+body::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+}
 
-    position: fixed;
-    left: 5%;
-    top: 0;
+.header>h1 {
+    margin: 0;
+    font-size: 15em;
+    padding: 10vh 20vw;
+    animation: main-title auto linear;
+    animation-timeline: scroll();
 }
 
 .header {
+    background-color: blue;
     width: 100vw;
     height: 100vh;
+    max-width: 100%;
+
     position: sticky;
-    background-color: #121926;
-    z-index: -1;
     top: 0;
 }
 
-.container {
-    background-color: aliceblue;
-    min-width: 400px;
-    width: 80vw;
-    height: 80vh;
+@keyframes main-title {
+    0% {
+        translate: 0px;
+    }
 
-    border-radius: 10px;
-    margin: 30vh auto;
+    100% {
+        translate: 200px 200px;
+    }
 }
