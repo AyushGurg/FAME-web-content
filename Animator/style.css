@@ -1,16 +1,7 @@
 body {
     margin: 0;
     height: 1000vh;
-    -ms-overflow-style: none;
-    /* for Internet Explorer, Edge */
-    scrollbar-width: none;
-    /* for Firefox */
-    overflow-y: scroll;
-}
 
-body::-webkit-scrollbar {
-    display: none;
-    /* for Chrome, Safari, and Opera */
 }
 
 .header>h1 {
@@ -36,7 +27,14 @@ body::-webkit-scrollbar {
         translate: 0px;
     }
 
-    100% {
+    20% {
         translate: 200px 200px;
     }
+}
+
+.header-img>.header-img1,
+.header-img2,
+.header-img3,
+.header-img4 {
+    position: absolute
 }
