@@ -1,40 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 body {
+    background-color: #121926;
     margin: 0;
-    height: 1000vh;
+
+    overflow-x: hidden;
+
+    font-family: 'Roboto', sans-serif;
 
 }
 
-.header>h1 {
-    margin: 0;
-    font-size: 15em;
-    padding: 10vh 20vw;
-    animation: main-title auto linear;
-    animation-timeline: scroll();
+:root {
+    --scroll: 0;
+    --oldmax: 100;
+    --oldmin: 30;
+    /* opacity 100-130*/
+
+}
+
+::-webkit-scrollbar {
+    /* display: none; */
 }
 
 .header {
-    background-color: blue;
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-
     position: sticky;
     top: 0;
+    background: linear-gradient(to bottom, #1d9add, 10%, #9ad8e7);
+    height: 100vh;
+    width: 100vw;
+
 }
 
-@keyframes main-title {
-    0% {
-        translate: 0px;
-    }
+.header-img1 {
+    position: absolute;
 
-    20% {
-        translate: 200px 200px;
-    }
+    bottom: 0;
+    width: min(108vw, calc(1vw * (((max(var(--scroll), 30) - var(--oldmin)) * (108 - 100) / (var(--oldmax) - var(--oldmin))) + 100)));
+    z-index: 11;
+
+    /* NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin */
+    translate: max(-1%, calc(-1% * (max(var(--scroll), 30) - var(--oldmin)) * (1 - 0) / (var(--oldmax) - var(--oldmin)))) min(30%, calc(1% * (max(var(--scroll), 30) - var(--oldmin)) * (30 - 0) / (var(--oldmax) - var(--oldmin))));
 }
 
-.header-img>.header-img1,
-.header-img2,
-.header-img3,
+.header-img2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 65vw;
+    z-index: 9;
+    filter: blur(0.5px);
+
+    translate: 0 min(20%, calc(1% * (max(var(--scroll), 30) - var(--oldmin)) * (20 - 0) / (var(--oldmax) - var(--oldmin))));
+
+}
+
+.header-img3 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 7;
+
+    translate: 0 min(5%, calc(1% * (max(var(--scroll), 30) - var(--oldmin)) * (5 - 0) / (var(--oldmax) - var(--oldmin))));
+
+}
+
+.header-img5 {
+    position: absolute;
+    width: 55vw;
+    top: 0;
+    right: 0;
+    z-index: 6;
+
+    translate: min(3%, calc(1% * (max(var(--scroll), 30) - var(--oldmin)) * (3 - 0) / (var(--oldmax) - var(--oldmin)))) 0;
+}
+
 .header-img4 {
-    position: absolute
+    position: absolute;
+    width: 30vw;
+    left: 0;
+    top: 5vh;
+    z-index: 8;
+
+    translate: min(3%, calc(1% * (max(var(--scroll), 30) - var(--oldmin)) * (3 - 0) / (var(--oldmax) - var(--oldmin)))) 0;
+
+}
+
+h1 {
+    margin: 0;
+    position: absolute;
+    z-index: 10;
+    top: 20%;
+    font-size: 15vw;
+    translate: max(30%, calc(170% - (1% * (max(var(--scroll), 30) - var(--oldmin)) * (160 - 0) / (var(--oldmax) - var(--oldmin))))) 0;
+}
+
+.header {
+    opacity: calc((100% - 1% * (max(var(--scroll, 120)) - 120) * (100 - 0) / (160 - 120)));
+}
+
+.header {
+    translate: 0 calc(-1% * ((max(var(--scroll), 130) - 130)) * (100 - 0) / (160 - 130));
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 10vw 80vw 10vw;
+    margin-top: 150vh;
+    position: relative;
+
+}
+
+.card {
+    background-color: white;
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 50vh;
+}
+
+.body .card:last-child {
+    margin-bottom: 10vh;
 }
