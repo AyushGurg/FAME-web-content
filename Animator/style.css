@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #121926;
     margin: 0;
@@ -14,8 +18,14 @@ body {
     --scroll: 0;
     --oldmax: 100;
     --oldmin: 30;
+    --collageScroll: 0;
+    --collageHeight: 0;
     /* opacity 100-130*/
+}
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -123,9 +133,9 @@ main {
     margin: 0 auto;
     border-radius: 10px;
     margin-bottom: 50vh;
-
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
     /*  */
-    border: 5px solid rebeccapurple;
+
 }
 
 .card h2 {
@@ -201,36 +211,116 @@ ul {
     z-index: 11;
 }
 
+.creative-skills h2 {
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-bottom: 4%;
+}
+
 .creative-skills h3 {
-    grid-row: 1/2;
+    grid-row: 1/3;
     grid-column: 1/3;
 }
 
 .skill-1 {
     grid-row: 2/3;
+    margin: 0 5%;
+}
+
+.skill-1 img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+}
+
+.skill-1 img:hover {
+    scale: 2.0;
 }
 
 .skill-2 {
     grid-row: 2/3;
+    margin: 0 5%;
+}
+
+.skill-2 img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+
+}
+
+.skill-2 img:hover {
+    scale: 2.0;
 }
 
 .skill-3 {
     grid-row: 3/4;
+    margin: 0 5%;
+}
+
+.skill-3 img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+
+}
+
+.skill-3 img:hover {
+    scale: 2.0;
 }
 
 .skill-4 {
     grid-row: 3/4;
+    margin: 0 5%;
 }
 
-.creative-skills {
-    z-index: 12;
+.skill-4 img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+
 }
 
+.skill-4 img:hover {
+    scale: 2.0;
+}
+
+/*------------------------------------THIRD CARD -----------------------------------------*/
 .technical-skills {
     z-index: 13;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 6fr;
 }
 
-/*------------------------------------SECOND CARD -----------------------------------------*/
+.technical-skills h2 {
+    margin-top: 4%;
+    margin-left: 4%;
+}
+
+.technical-skills .skill-1 img {
+    width: 500px;
+    margin-left: 15%;
+    margin-top: 9%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+
+}
+
+.technical-skills .skill-2 img {
+    width: 500px;
+    margin-left: 15%;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+}
+
+.technical-skills img:hover {
+    scale: 1.5;
+}
+
+
+/*------------------------------------FOURTH  CARD -----------------------------------------*/
 .portfolio {
     text-align: center;
     z-index: 14;
@@ -302,59 +392,71 @@ ul {
     rotate: 10deg;
 }
 
-.example-1-1.show {
+.example-1-1.show,
+.example-2-2.show {
     translate: 8vw 8vh;
     width: 500px;
     rotate: 0deg;
 }
 
-.example-1-2.show {
+.example-1-2.show,
+.example-2-1.show {
     translate: 38vw 8vh;
     width: 500px;
     rotate: 0deg;
 }
 
-.example-1-3.show {
+.example-1-3.show,
+.example-2-4.show {
     translate: 68vw 8vh;
     width: 500px;
     rotate: 0deg;
 }
 
-.example-1-4.show {
+.example-1-4.show,
+.example-2-5.show {
     translate: 68vw 50vh;
     width: 500px;
     rotate: 0deg;
 }
 
-.example-1-5.show {
+.example-1-5.show,
+.example-2-6.show {
     translate: 35vw 50vh;
     width: 500px;
     rotate: 0deg;
 }
 
-.example-1-6.show {
+.example-1-6.show,
+.example-2-3.show {
     translate: 4vw 50vh;
     width: 500px;
     rotate: 0deg;
 }
 
-.example-1-2 {
+.example-1-2,
+.example-2-1,
+.example-2-6 {
     background-color: rgb(81, 64, 122);
     rotate: -10deg;
 }
 
 .example-1-3,
-.example-1-5 {
+.example-1-5,
+.example-2-2,
+.example-2-4 {
     background-color: #1d9add;
     rotate: 5deg;
 }
 
-.example-1-4 {
+.example-1-4,
+.example-2-3 {
     background-color: #8f1e63;
     rotate: -5deg;
 }
 
-.example-1-6 {
+.example-1-6,
+.example-2-5 {
     background-color: #ffe200;
 }
 
@@ -365,10 +467,63 @@ button.close {
 
 
 
-/* -------------------------------------------------------------------------------------- */
+/* ------------------------------------FIFTH CARD--------------------------------------- */
 
 .job-outlook {
     z-index: 15;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 1fr 2fr 2fr 6fr;
+}
+
+.job-outlook h2 {
+    margin-top: 2%;
+    margin-left: 2%;
+
+    grid-row: 1/2;
+    grid-column: 1/3;
+}
+
+.job-outlook .description {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin: 0 5%;
+}
+
+.job-outlook .salary {
+    margin: 0 5%;
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.job-outlook .chart1 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
+
+.ticks {
+    position: relative;
+
+
+    width: 596px;
+    height: 300px;
+    z-index: 1;
+    margin-left: 11%;
+    font-size: 10px;
+    font-family: "fira-sans-2", Verdana, sans-serif;
+}
+
+.ticks .tick {
+    position: relative;
+    border-bottom: 1px dotted #C4C4C4;
+    width: 600px;
+}
+
+.ticks .tick p {
+    position: absolute;
+    left: -5em;
+    top: -0.8em;
+    margin: 0 0 0 0.5em;
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -376,10 +531,12 @@ button.close {
 
 
 .potential-employers {
+
     z-index: 16;
     display: grid;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 1fr 1fr;
+    text-align: center;
 }
 
 .potential-employers img {
@@ -390,7 +547,9 @@ button.close {
 .potential-employers h2 {
     grid-row: 1/2;
     grid-column: 1/3;
+    margin-top: 2%;
 }
+
 
 .potential-employers .game {
     grid-row: 2/3;
@@ -399,6 +558,8 @@ button.close {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr 3fr;
+
+    margin-left: 10%;
 }
 
 .potential-employers .game .game-1 {
@@ -421,18 +582,31 @@ button.close {
     grid-column: 2/3;
 }
 
+.potential-employers .film h3,
+.potential-employers .game h3 {
+    grid-row: 1/2;
+    grid-column: 1/3;
+}
+
 .potential-employers .film {
     grid-row: 2/3;
     grid-column: 2/3;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-rows: 1fr 2fr 3fr;
 }
 
 .potential-employers .film .film-1 {
     grid-row: 2/3;
     grid-column: 1/3;
+
+}
+
+.potential-employers .film .film-1 img {
+    width: 300px;
+    height: 100px;
+    justify-self: center;
 }
 
 .potential-employers .film .film-2 {
@@ -445,36 +619,132 @@ button.close {
     grid-column: 2/3;
 }
 
+.potential-employers .film .film-3 img {
+    width: 300px;
+    height: 200px;
+    justify-self: center;
+}
+
 /* -------------------------------------------------------------------------------------- */
 /* ----------------------------------SEVENTH CARD------------------------------------------ */
 .day-in-life {
     z-index: 17;
 }
 
-/* -------------------------------------------------------------------------------------- */
-/* ----------------------------------EIGHTH CARD------------------------------------------ */
-.day-in-life {
-    z-index: 18;
+.day-in-life h2 {
+    margin-top: 2%;
+    margin-left: 2%;
 }
 
 /* -------------------------------------------------------------------------------------- */
-/* ----------------------------------NINETH CARD------------------------------------------ */
+/* ----------------------------------EIGHTH CARD------------------------------------------ */
 .success-stories {
     z-index: 19;
 }
 
+.success-stories h2 {
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
 /* -------------------------------------------------------------------------------------- */
-/* ----------------------------------TENTH CARD------------------------------------------ */
+/* ----------------------------------NINETH CARD------------------------------------------ */
 .last-card {
-    z-index: 20;
+    z-index: 22;
     width: 80vw;
     height: 100vh;
+    position: relative;
+    background-color: white;
+    margin-top: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow: scroll;
+    overflow-x: hidden;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+    border-radius: 10px;
+
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: 1/2;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+}
+
+.col-3 {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-column: 3/4;
+}
+
+.col-4 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 4/5;
+}
+
+.column .reverse-image,
+.column .normal-image {
+    position: relative;
+    width: 86%;
+    height: 500px;
+    border: 1px solid black;
+    margin-top: 20px;
+    align-self: center;
+    z-index: 20;
+}
+
+.column .reverse-image {
+    position: relative;
+
 }
 
 
-footer {
-    margin-top: 15vh;
+
+.column .normal-image {
+    position: relative;
+    translate: 0 calc(-1250%);
+    transform: translateY(calc(1.2px * (var(--collageScroll) - 0) * (var(--collageHeight) - 0) / (100)));
 }
+
+
+.last-card h2 {
+    display: none;
+}
+
+.last-card .title1 {
+    position: absolute;
+    left: 35%;
+    translate: 0 calc(100%);
+    z-index: 12;
+}
+
+.last-card .title2 {
+    position: absolute;
+    left: 85%;
+    translate: 0 calc(350%);
+    z-index: 12;
+}
+
+.title1 div,
+.title2 div {
+    font-size: 80px;
+    text-align: center;
+
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
 
 .site-nav-progress {
     position: sticky;
@@ -498,7 +768,7 @@ footer {
     content: "";
     display: block;
     width: 5px;
-    height: 730px;
+    height: 772px;
     background-color: #83aff0;
     z-index: -1;
     position: absolute;
@@ -518,14 +788,17 @@ footer {
     left: 43.5%;
 }
 
+.chapters a {
+    margin-top: 50px;
+}
+
 .circle {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     margin-top: 50px;
 
-    background: radial-gradient(closest-side, #121926 69%, transparent 70% 100%),
-        conic-gradient(#ffe200 0%, #83aff0 10%);
+    background-color: #ffe200;
 }
 
 .circle:first-child {

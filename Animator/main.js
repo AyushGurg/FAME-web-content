@@ -2,12 +2,15 @@ window.addEventListener("scroll", setScrollVar);
 window.addEventListener("resize", setScrollVar);
 window.addEventListener("scroll", cardStall);
 
+let htmlElement = document.documentElement;
 // Scroll event
 function setScrollVar() {
-    let htmlElement = document.documentElement;
+
     let percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement.clientHeight;
-    // console.log(percentOfScreenHeightScrolled);
+    console.log(percentOfScreenHeightScrolled);
     htmlElement.style.setProperty('--scroll', percentOfScreenHeightScrolled * 100);
+
+
 }
 
 setScrollVar();
@@ -79,13 +82,22 @@ portfolioExamples.forEach(example => {
     example.addEventListener("click", () => {
         open = false;
         example.classList.toggle("active");
+        document.body.classList.toggle("stop-scrolling");
         children.forEach(child => {
             child.classList.toggle("show");
         })
     });
 });
+let collage = document.querySelector(".last-card");
+let collageDim = collage.getBoundingClientRect();
 
-//Job Outlook
+function collageScroll() {
+    let percentofCollageScrolled = (collage.scrollTop / (collage.scrollHeight - window.innerHeight));
+    htmlElement.style.setProperty("--collageScroll", percentofCollageScrolled * 100);
+    htmlElement.style.setProperty("--collageHeight", collage.scrollHeight)
 
+}
+collageScroll()
+collage.addEventListener("scroll", collageScroll);
 
 
