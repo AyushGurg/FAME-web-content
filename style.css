@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@900&display=swap');
+
+body {
+    background-color: #121926;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+
+}
+
+header h1 {
+    position: absolute;
+    top: 0;
+}
+
+header div {
+    font-family: "REM", sans-serif;
+    font-size: 200px;
+
+    white-space: nowrap;
+}
+
+header .odd {
+    translate: -300vw;
+}
+
+.quiz {
+    width: 80%;
+    margin-left: 10%;
+    height: 50vh;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.quiz h2 {
+    text-align: center;
+    padding-top: 160px;
+    font-size: 200px
+}
+
+
+
+.careers {
+    display: flex;
+    justify-content: space-around;
+}
+
+.career {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+section h2 {
+    margin: 100px 0;
+    text-align: center;
+}
+
+.career:hover {
+    scale: 2;
+}
