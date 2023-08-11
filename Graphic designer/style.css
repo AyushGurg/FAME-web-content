@@ -173,7 +173,7 @@ ul {
 }
 
 .job-desc h3 {
-    font-size: 20px;
+    font-size: 4em;
     margin-top: 10px;
     margin-bottom: 10;
 
@@ -519,14 +519,16 @@ button.close {
     grid-row: 2/3;
     grid-column: 1/2;
     margin: 0 5%;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .job-outlook .salary {
     margin: 0 5%;
     grid-row: 2/3;
     grid-column: 2/3;
-    font-size: 30px;
+    font-size: 20px;
+    white-space:normal;
+    width: 55%;
 }
 
 .job-outlook .chart1 {
