@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=REM:wght@900&family=Staatliches&display=swap');
 
+@font-face {
+    font-family: 'Ghibli';
+    src: url(./font/Ghibli.otf);
+}
 
 html {
     scroll-behavior: smooth;
@@ -98,6 +102,9 @@ body {
 }
 
 h1 {
+    font-family: 'Ghibli', sans-serif;
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
     margin: 0;
     position: absolute;
     z-index: 10;
@@ -287,32 +294,41 @@ ul {
     scale: 2.0;
 }
 
+.skill-1 img,
+.skill-2 img,
+.skill-3 img,
+.skill-4 img {
+    margin-left: 30%;
+    margin-top: 2%;
+}
+
 /*------------------------------------THIRD CARD -----------------------------------------*/
 .technical-skills {
     z-index: 13;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 6fr 3fr;
+    grid-template-rows: 1fr 4fr 3fr;
 }
 
 .technical-skills h2 {
-    margin-top: 4%;
+    margin-top: 2%;
     margin-left: 4%;
+    margin-bottom: 2%;
 }
 
 .technical-skills .skill-1 img {
-    width: 500px;
+    width: 20vw;
     margin-left: 15%;
-    margin-top: 9%;
+    margin-top: 2%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 
 }
 
 .technical-skills .skill-2 img {
-    width: 500px;
+    width: 20vw;
     margin-left: 15%;
-    margin-top: 5%;
+    margin-top: 2%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 }
@@ -504,44 +520,71 @@ button.close {
     grid-row: 2/3;
     grid-column: 1/2;
     margin: 0 5%;
+    font-size: 1.5em;
 }
 
 .job-outlook .salary {
     margin: 0 5%;
     grid-row: 2/3;
     grid-column: 2/3;
+    font-size: 1.5em;
 }
 
 
 .job-outlook .chart1 {
+    width: 30vw;
+    height: 30vh;
+
     grid-row: 4/5;
     grid-column: 1/2;
-    border: 1px solid black;
     margin: auto;
 }
 
-.chart1 p {
-    width: 800px;
-    height: 400px;
-    text-align: center;
-    margin: auto;
-    font-size: 100px
+
+
+.province-title {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.fa-star {
+    color: #83aff0;
+}
+
+.chart1 .province {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 35px;
+}
+
+.province .checked {
+    color: #121926;
 }
 
 .job-outlook .chart2 {
+    width: 30vw;
+    height: 30vh;
     grid-row: 4/5;
     grid-column: 2/3;
-    border: 1px solid black;
     margin: auto;
 }
 
-.chart2 p {
-    width: 800px;
-    height: 400px;
-    text-align: center;
-    margin: auto;
-    font-size: 100px
+.chart2 .province {
+    display: grid;
+    width: 300px;
+    height: 35px;
+    grid-template-columns: 1fr 1fr;
+
 }
+
+.chart2 .province .Number {
+    font-size: 1.5em;
+}
+
+
+
+
+
 
 
 /* -------------------------------------------------------------------------------------- */
@@ -650,8 +693,12 @@ button.close {
 }
 
 .day-in-life h2 {
-    margin-top: 2%;
+    padding-top: 2%;
     margin-left: 2%;
+}
+
+iframe {
+    margin-left: 10%;
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -798,7 +845,7 @@ button.close {
     background-color: #83aff0;
     z-index: -1;
     position: absolute;
-    left: 40%;
+    left: 43.5%;
     border-radius: 5px;
 }
 
@@ -811,7 +858,7 @@ button.close {
     background-color: #ffe200;
     z-index: 0;
     position: absolute;
-    left: 40%;
+    left: 43.5%;
 }
 
 .chapters a {
