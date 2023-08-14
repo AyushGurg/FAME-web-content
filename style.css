@@ -1,111 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=REM:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=REM:wght@900&family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=REM:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=REM:wght@900&family=Staatliches&display=swap");
 
 body {
-    background-color: #121926;
-    overflow-x: hidden;
+  background-color: #121926;
+  overflow-x: hidden;
+  font-size: 16px;
 }
 
 header {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    color: #fff;
-
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: #fff;
 }
 
 header h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20em;
-    margin: 0;
-    font-family: 'REM', sans-serif;
-    text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
-    color: #ffe200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20em;
+  margin: 0;
+  font-family: "REM", sans-serif;
+  text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+  color: #ffe200;
 }
 
 header .background {
-    opacity: 10%;
-    width: 100%;
+  opacity: 10%;
+  width: 100%;
 }
 
 header div {
-    font-family: "REM", sans-serif;
-    font-size: 3.5em;
+  font-family: "REM", sans-serif;
+  font-size: 3.5em;
 
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 header .odd {
-    translate: -350vw;
+  translate: -350vw;
 }
 
 .quiz {
-    width: 80%;
-    margin-top: 10%;
-    margin-left: 10%;
-    height: 70vh;
-    border-radius: 10px;
-    background-color: #fff;
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 10%;
+  height: 70vh;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
 .quiz-title {
-    padding-top: 10%;
+  padding-top: 10%;
 }
 
 .quiz h2 {
-    text-align: center;
-    font-size: 200px;
-    margin-bottom: 0;
-    margin-top: 0;
+  text-align: center;
+  font-size: 200px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-
-
 .careers {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .career {
-    width: 20vw;
-    height: 20vh;
-    background-color: #fff;
-    border-radius: 20px;
-    margin-bottom: 200px;
-    position: relative;
+  width: 20vw;
+  height: 20vh;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 200px;
+  position: relative;
 }
 
 section h2 {
-    margin-top: 300px;
-    margin-bottom: 200px;
-    text-align: center;
-    font-family: 'REM', sans-serif;
-    text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
-    color: #ffe200;
-    font-size: 100px;
+  margin-top: 300px;
+  margin-bottom: 200px;
+  text-align: center;
+  font-family: "REM", sans-serif;
+  text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+  color: #ffe200;
+  font-size: 100px;
 }
 
 h3 {
-    position: absolute;
-    bottom: 2%;
-    left: 5%;
-    font-family: 'REM', sans-serif;
-    text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
-    color: #ffe200;
-    font-size: 50px;
-    margin-bottom: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+  font-family: "REM", sans-serif;
+  text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+  color: #ffe200;
+  font-size: 50px;
+  margin-bottom: 0;
 }
 
-
 .animator:hover {
-    scale: 2;
-    background: url(./Animator.jpg);
+  scale: 2;
+  background: url(./Animator.jpg);
 }
 
 .graphicDesigner:hover {
-    scale: 2;
-    background: url(./Graphic-designer.jpg);
+  scale: 2;
+  background: url(./Graphic-designer.jpg);
 }
