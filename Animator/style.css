@@ -892,6 +892,7 @@ iframe {
 }
 
 .circle {
+
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -963,4 +964,10 @@ a {
     color: #ffe200;
     margin-left: 20px;
     font-size: 3em;
+}
+
+@media only screen and (max-width: 1080px) {
+    body {
+        background-color: lightblue;
+    }
 }
