@@ -117,16 +117,16 @@ h1 {
   color: #fff;
   text-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   position: absolute;
-  font-size: 210px;
+  font-size: 10rem;
   font-weight: bolder;
   top: 10%;
-  left: -25%;
+  left: -30vw;
 
   translate: min(
-      130%,
+      30vw,
       calc(
         (
-          1% * (var(--scroll) - var(--oldmin)) * (130 - 0) /
+          1vw * (var(--scroll) - var(--oldmin)) * (30 - 0) /
             (var(--oldmax) - var(--oldmin))
         )
       )
@@ -139,16 +139,16 @@ h1 {
   color: #fff;
   text-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   position: absolute;
-  font-size: 210px;
+  font-size: 10rem;
   font-weight: bolder;
   top: 10%;
-  right: -25%;
+  right: -40vw;
 
   translate: max(
-      -100%,
+      -40vw,
       calc(
         (
-          -1% * (var(--scroll) - var(--oldmin)) * (100 - 0) / (var(--oldmax) -
+          -1vw * (var(--scroll) - var(--oldmin)) * (40 - 0) / (var(--oldmax) -
                 var(--oldmin))
         )
       )
@@ -615,7 +615,7 @@ button.close {
 .chart1 .province {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 35px;
+  height: 4vh;
   width: 110%;
 }
 
@@ -632,7 +632,7 @@ button.close {
 .chart2 .province {
   display: grid;
   width: 15vw;
-  height: 35px;
+  height: 4vh;
   grid-template-columns: 1fr 1fr;
   width: 120%;
 }

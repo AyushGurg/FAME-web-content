@@ -4,7 +4,7 @@
 body {
   background-color: #121926;
   overflow-x: hidden;
-  font-size: 16px;
+  font-size: 1vw;
 }
 
 header {
@@ -19,7 +19,7 @@ header h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20em;
+  font-size: 15rem;
   margin: 0;
   font-family: "REM", sans-serif;
   text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
@@ -33,7 +33,7 @@ header .background {
 
 header div {
   font-family: "REM", sans-serif;
-  font-size: 3.5em;
+  font-size: 10rem;
 
   white-space: nowrap;
 }
@@ -57,7 +57,7 @@ header .odd {
 
 .quiz h2 {
   text-align: center;
-  font-size: 200px;
+  font-size: 10rem;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -83,7 +83,7 @@ section h2 {
   font-family: "REM", sans-serif;
   text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
   color: #ffe200;
-  font-size: 100px;
+  font-size: 10rem;
 }
 
 h3 {
@@ -93,7 +93,7 @@ h3 {
   font-family: "REM", sans-serif;
   text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
   color: #ffe200;
-  font-size: 50px;
+  font-size: 3rem;
   margin-bottom: 0;
 }
 
