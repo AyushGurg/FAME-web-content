@@ -7,6 +7,10 @@ body {
   font-size: 1vw;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 header {
   width: 100vw;
   height: 100vh;

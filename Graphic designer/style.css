@@ -102,30 +102,13 @@ h1 {
   color: #fff;
   text-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   position: absolute;
-<<<<<<< HEAD
-  font-size: 10rem;
-=======
   font-size: 3rem;
->>>>>>> 30899bab7828864a62fcba8462abe82860eac4e7
   font-weight: bolder;
   top: 10%;
   left: -30vw;
 
-<<<<<<< HEAD
-  translate: min(
-      30vw,
-      calc(
-        (
-          1vw * (var(--scroll) - var(--oldmin)) * (30 - 0) /
-            (var(--oldmax) - var(--oldmin))
-        )
-      )
-    )
-    0;
-=======
   translate: min(130%,
       calc((1% * (var(--scroll) - var(--oldmin)) * (130 - 0) / (var(--oldmax) - var(--oldmin))))) 0;
->>>>>>> 30899bab7828864a62fcba8462abe82860eac4e7
 }
 
 .header .title-2 {
@@ -133,30 +116,13 @@ h1 {
   color: #fff;
   text-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
   position: absolute;
-<<<<<<< HEAD
-  font-size: 10rem;
-=======
   font-size: 3rem;
->>>>>>> 30899bab7828864a62fcba8462abe82860eac4e7
   font-weight: bolder;
   top: 10%;
   right: -40vw;
 
-<<<<<<< HEAD
-  translate: max(
-      -40vw,
-      calc(
-        (
-          -1vw * (var(--scroll) - var(--oldmin)) * (40 - 0) / (var(--oldmax) -
-                var(--oldmin))
-        )
-      )
-    )
-    0;
-=======
   translate: max(-100%,
       calc((-1% * (var(--scroll) - var(--oldmin)) * (100 - 0) / (var(--oldmax) - var(--oldmin))))) 0;
->>>>>>> 30899bab7828864a62fcba8462abe82860eac4e7
 }
 
 .header {
@@ -224,7 +190,7 @@ ul {
 }
 
 .job-desc li {
-  margin-bottom: 20px;
+  margin-bottom: 1%;
 }
 
 .job-desc img {
@@ -240,7 +206,7 @@ ul {
 .desc {
   grid-column: 1/2;
   grid-row: 1/2;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .responsiblities {
@@ -274,7 +240,7 @@ ul {
   grid-row: 1/3;
   grid-column: 1/3;
   font-size: 1.5rem;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 2%;
 }
 
@@ -296,12 +262,12 @@ ul {
 
 .skill-2 {
   grid-row: 2/3;
-  grid: 2/3;
+  grid-column: 2/3;
   margin: 0 5%;
 }
 
 .skill-2 img {
-  width: 40%;
+  width: 30%;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
 }
@@ -342,10 +308,10 @@ ul {
   scale: 2.5;
 }
 
-.skill-1 p,
-.skill-2 p,
-.skill-3 p,
-.skill-4 p {
+.creative-skills .skill-1 p,
+.creative-skills .skill-2 p,
+.creative-skills .skill-3 p,
+.creative-skills .skill-4 p {
   font-size: 0.9rem;
 }
 
@@ -404,7 +370,7 @@ ul {
 .skill-1 h3,
 .skill-2 h3,
 .skill-3 h3 {
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 2%;
   font-size: 1.5rem;
 }
@@ -570,12 +536,20 @@ button.close {
   grid-template-rows: 1fr 2fr 2fr 6fr;
 }
 
-.job-outlook h2 {
+.job-outlook .title {
   margin-top: 2%;
   margin-left: 2%;
 
   grid-row: 1/2;
-  grid-column: 1/3;
+  grid-column: 1/2;
+}
+
+.job-outlook .salary-title {
+  margin-top: 2%;
+  margin-left: 2%;
+
+  grid-row: 1/2;
+  grid-column: 2/3;
 }
 
 .job-outlook .description {
@@ -925,5 +899,5 @@ a {
   text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
   color: #ffe200;
   margin-left: 20px;
-  font-size: 3em;
+  font-size: 1.6em;
 }
