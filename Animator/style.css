@@ -51,13 +51,35 @@ body {
   position: absolute;
 
   bottom: 0;
-  width: min(108vw,
-      calc(1vw * (((max(var(--scroll), 30) - var(--oldmin)) * (108 - 100) / (var(--oldmax) - var(--oldmin))) + 100)));
+  width: min(
+    108vw,
+    calc(
+      1vw *
+        (
+          (
+              (max(var(--scroll), 30) - var(--oldmin)) * (108 - 100) /
+                (var(--oldmax) - var(--oldmin))
+            ) + 100
+        )
+    )
+  );
   z-index: 11;
 
-  translate: max(-1%,
-      calc(-1% * (max(var(--scroll), 30) - var(--oldmin)) * (1 - 0) / (var(--oldmax) - var(--oldmin)))) min(30%,
-      calc(1% * (max(var(--scroll), 30) - var(--oldmin)) * (30 - 0) / (var(--oldmax) - var(--oldmin))));
+  translate: max(
+      -1%,
+      calc(
+        -1% * (max(var(--scroll), 30) - var(--oldmin)) * (1 - 0) / (var(
+                --oldmax
+              ) - var(--oldmin))
+      )
+    )
+    min(
+      30%,
+      calc(
+        1% * (max(var(--scroll), 30) - var(--oldmin)) * (30 - 0) /
+          (var(--oldmax) - var(--oldmin))
+      )
+    );
 }
 
 .header-img2 {
@@ -68,8 +90,14 @@ body {
   z-index: 9;
   filter: blur(0.5px);
 
-  translate: 0 min(20%,
-      calc(1% * (max(var(--scroll), 30) - var(--oldmin)) * (20 - 0) / (var(--oldmax) - var(--oldmin))));
+  translate: 0
+    min(
+      20%,
+      calc(
+        1% * (max(var(--scroll), 30) - var(--oldmin)) * (20 - 0) /
+          (var(--oldmax) - var(--oldmin))
+      )
+    );
 }
 
 .header-img3 {
@@ -79,8 +107,14 @@ body {
   width: 100vw;
   z-index: 7;
 
-  translate: 0 min(5%,
-      calc(1% * (max(var(--scroll), 30) - var(--oldmin)) * (5 - 0) / (var(--oldmax) - var(--oldmin))));
+  translate: 0
+    min(
+      5%,
+      calc(
+        1% * (max(var(--scroll), 30) - var(--oldmin)) * (5 - 0) /
+          (var(--oldmax) - var(--oldmin))
+      )
+    );
 }
 
 .header-img5 {
@@ -90,8 +124,14 @@ body {
   right: 0;
   z-index: 6;
 
-  translate: min(3%,
-      calc(1% * (max(var(--scroll), 30) - var(--oldmin)) * (3 - 0) / (var(--oldmax) - var(--oldmin)))) 0;
+  translate: min(
+      3%,
+      calc(
+        1% * (max(var(--scroll), 30) - var(--oldmin)) * (3 - 0) /
+          (var(--oldmax) - var(--oldmin))
+      )
+    )
+    0;
 }
 
 .header-img4 {
@@ -101,8 +141,14 @@ body {
   top: 5vh;
   z-index: 8;
 
-  translate: min(3%,
-      calc(1% * (max(var(--scroll), 30) - var(--oldmin)) * (3 - 0) / (var(--oldmax) - var(--oldmin)))) 0;
+  translate: min(
+      3%,
+      calc(
+        1% * (max(var(--scroll), 30) - var(--oldmin)) * (3 - 0) /
+          (var(--oldmax) - var(--oldmin))
+      )
+    )
+    0;
 }
 
 h1 {
@@ -114,16 +160,28 @@ h1 {
   z-index: 10;
   top: 20%;
   font-size: 16rem;
-  translate: max(30%,
-      calc(170% - (1% * (max(var(--scroll), 30) - var(--oldmin)) * (160 - 0) / (var(--oldmax) - var(--oldmin))))) 0;
+  translate: max(
+      30%,
+      calc(
+        170% -
+          (
+            1% * (max(var(--scroll), 30) - var(--oldmin)) * (160 - 0) /
+              (var(--oldmax) - var(--oldmin))
+          )
+      )
+    )
+    0;
 }
 
 .header {
-  opacity: calc((100% - 1% * (max(var(--scroll, 120)) - 120) * (100 - 0) / (160 - 120)));
+  opacity: calc(
+    (100% - 1% * (max(var(--scroll, 120)) - 120) * (100 - 0) / (160 - 120))
+  );
 }
 
 .header {
-  translate: 0 calc(-1% * ((max(var(--scroll), 130) - 130)) * (100 - 0) / (160 - 130));
+  translate: 0
+    calc(-1% * ((max(var(--scroll), 130) - 130)) * (100 - 0) / (160 - 130));
 }
 
 main {
@@ -355,8 +413,8 @@ ul {
 }
 
 .technical-skills .skill-3 img {
-  width: 5vw;
-  height: 5vw;
+  width: 3vw;
+  height: 3vw;
   box-shadow: none;
   margin-left: 5%;
   margin-top: 3%;
@@ -688,7 +746,6 @@ button.close {
   grid-column: 1/3;
 }
 
-
 .potential-employers .film .film-2 {
   grid-row: 3/4;
   grid-column: 1/2;
@@ -808,7 +865,11 @@ iframe {
 .column .normal-image {
   position: relative;
   translate: 0 calc(-1250%);
-  transform: translateY(calc(1.2px * (var(--collageScroll) - 0) * (var(--collageHeight) - 0) / (100)));
+  transform: translateY(
+    calc(
+      1.2px * (var(--collageScroll) - 0) * (var(--collageHeight) - 0) / (100)
+    )
+  );
 }
 
 .last-card h2 {
@@ -872,7 +933,9 @@ iframe {
   width: 5px;
   /* NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin */
   border-radius: 5px;
-  height: calc(1px * ((max(var(--scroll), 240) - 240)) * (730 - 0) / (1280 - 241));
+  height: calc(
+    1px * ((max(var(--scroll), 240) - 240)) * (730 - 0) / (1280 - 241)
+  );
   background-color: #ffe200;
   z-index: 0;
   position: absolute;
@@ -949,7 +1012,5 @@ a {
   text-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
   color: #ffe200;
   margin-left: 20px;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
 }
-
-@media only screen and (max-width: 1080px) {}
